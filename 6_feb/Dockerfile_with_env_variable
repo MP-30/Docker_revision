@@ -1,0 +1,8 @@
+FROM python:3.12-slim
+# Set a default value
+WORKDIR /code
+ENV APP_MODE=production
+COPY . /code
+CMD ["python", "app.py"]
+
+#user -e APP_MODE=development at the time of run
