@@ -1,0 +1,9 @@
+FROM ubuntu:24.04
+RUN groupadd -g 1001 appgroup && useradd -m -u 1001 -g appgroup -s /bin/bash appuser
+
+WORKDIR /home/appuser
+
+USER appuser
+
+CMD ["bash"]
+
